@@ -4,35 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog Answer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <h3>Discuss the scope of var, let, and const.</h3>
-    <p>
-      Var keyword declares a variable which is scoped to its current execution
+  <body class="my-5 mx-5 bg-purple-600 text-white">
+    <div class="mb-5 my-5">
+      <h3 class="text-3xl"><b>Discuss the scope of var, let, and const...</b></h3>
+    <p class="text-xl">
+     <b>Var:</b> Var keyword declares a variable which is scoped to its current execution
       context, optionally initializing to a value.
     </p>
 
-    <p>
-      Let keyword declares a block scoped variable, optionally initializing it
+    <p class="text-xl">
+     <b>Let:</b> Let keyword declares a block scoped variable, optionally initializing it
       to a value.
     </p>
 
-    <p>
-      Const keyword declares constants which are block scoped much like
+    <p class="text-xl">
+     <b>Const:</b> Const keyword declares constants which are block scoped much like
       variables defined using let but the value of a constant cannot change. The
       const declaration creates a read-only reference to a value.
     </p>
-    <h3>Tell us the use cases of null and undefined</h3>
-    <p>
-      Null means an empty value or a blank value. The typeof() operator returns
-      the type as an object for a variable whose value is assigned as null.
+    </div>
+    <div class="mb-5 my-5">
+      <h3 class="text-3xl">
+        <b>Tell us the use cases of null and undefined...</b>
+      </h3>
+      <p class="text-xl">
+       <b>Null:</b> Null means an empty value or a blank value. The typeof() operator returns
+        the type as an object for a variable whose value is assigned as null.
+      </p>
+      <p class="text-xl">
+       <b>Undefined:</b> Undefined means the variable has been declared, but its value has not been
+        assigned.The typeof() operator returns undefined for an undefined
+        variable.
+      </p>
+    </div>
+   <div class="my-5">
+    <h3 class="text-3xl"><b>What do you mean by REST API?</b></h3>
+    <p class="text-xl">
+      A REST API (also known as RESTful API) is an application programming
+      interface (API or web API) that conforms to the constraints of REST
+      architectural style and allows for interaction with RESTful web services.
+      REST stands for representational state transfer and was created by
+      computer scientist Roy Fielding.
     </p>
-    <p>
-      Undefined means the variable has been declared, but its value has not been
-      assigned.The typeof() operator returns undefined for an undefined
-      variable.
-    </p>
-    <h3>What do you mean by REST API?</h3>
-    <p>A REST API (also known as RESTful API) is an application programming interface (API or web API) that conforms to the constraints of REST architectural style and allows for interaction with RESTful web services. REST stands for representational state transfer and was created by computer scientist Roy Fielding.</p>
+   </div>
   </body>
 </html>

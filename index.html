@@ -11,47 +11,44 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <header class="mx-6">
-      <!-- navbar section -->
-      <div class="navbar bg-base-100">
-        <div class="navbar-start">
-          <div class="dropdown"></div>
-          <img src="./Logo.png" alt="" />
-        </div>
-        <div class="navbar-center hidden lg:flex">
-          <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
-            Sort by view
-          </button>
-        </div>
-        <div class="navbar-end">
-          <a href="http://127.0.0.1:5500/blog.html">
-            <button
-              class="rounded-xl bg-[#FF1F3D] text-white btn-xs sm:btn-sm md:btn-md lg:btn-lg"
-            >
-              Blog
-            </button>
-          </a>
-        </div>
+  <body class="container mx-auto">
+    <!-- navbar section -->
+    <div class="navbar bg-base-100">
+      <div class="navbar-start">
+        <div class="dropdown"></div>
+        <img src="./Logo.png" alt="" />
       </div>
-    </header>
-    <main class="container mx-auto">
-      <!-- start btn -->
-      <div
-        id="btn-container"
-        class="btn-container flex justify-center gap-4 my-10"
-      >
-        <!-- <button class="btn">All</button>
+      <div class="navbar-center lg:flex">
+        <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+          Sort by view
+        </button>
+      </div>
+      <div class="navbar-end">
+        <a href="http://127.0.0.1:5500/blog.html">
+          <button
+            class="rounded-xl bg-[#FF1F3D] text-white btn-xs sm:btn-sm md:btn-md lg:btn-lg"
+          >
+            Blog
+          </button>
+        </a>
+      </div>
+    </div>
+    <!-- start btn -->
+    <div
+      id="btn-container"
+      class="btn-container flex justify-center gap-4 my-10"
+    >
+      <!-- <button class="btn">All</button>
       <button class="btn">Music</button>
       <button class="btn">Comedy</button>
       <button class="btn">Drawing</button> -->
-      </div>
-      <!-- card -->
-      <div
-        id="card-container"
-        class="grid gap-4 grid-cols-4 md:grid-cols-2 lg:grid-cols-4 sm:grid-cols-1"
-      >
-        <!-- <div class="card w-96 bg-base-100 shadow-xl">
+    </div>
+    <!-- card -->
+    <div
+      id="card-container"
+      class="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 sm:grid-cols-1"
+    >
+      <!-- <div class="card w-96 bg-base-100 shadow-xl">
         <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
         <div class="card-body">
           <h2 class="card-title">
@@ -65,9 +62,8 @@
           </div>
         </div>
       </div> -->
-      </div>
-    </main>
-    <footer></footer>
+    </div>
+
     <script src="js/index.js"></script>
   </body>
 </html>
