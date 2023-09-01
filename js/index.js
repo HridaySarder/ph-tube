@@ -24,12 +24,12 @@ const handleLoadVideos = async (categoryId) => {
     console.log(videos);
   const div = document.createElement('div');
   div.innerHTML = `
-  <div class="card bg-base-100 shadow-xl">
+  <div class="card w-72 h-96 bg-base-100 shadow-xl">
         <figure><img src=${videos?.thumbnail} /></figure>
         <div class="card-body">
         <div class="flex justify-center gap-4">
-        <div class="w-14 rounded">
-        <img src=${videos?.authors[0]?.profile_picture} />
+        <div class="w-14 h-14 rounded-full overflow-hidden">
+        <img src="${videos?.authors[0]?.profile_picture}" class="w-full h-full object-cover"/>
                   </div>
         
           <h2 class="card-title">
@@ -38,9 +38,7 @@ const handleLoadVideos = async (categoryId) => {
           </h2>
           <p>${videos?.authors[0]?.profile_name}</p>
           <div class="card-actions justify-end">
-            <div class="badge badge-outline">Fashion</div> 
-            <div class="badge badge-outline">Products</div>
-          </div>
+            
         </div>
       </div>
   `
@@ -49,3 +47,4 @@ const handleLoadVideos = async (categoryId) => {
 console.log(data);
 }
 handleCategory();
+
