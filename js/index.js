@@ -22,23 +22,31 @@ const handleLoadVideos = async (categoryId) => {
   const data = await response.json();
   const cardContainer = document.getElementById("card-container");
   cardContainer.innerHTML = "";
+
   data.data.forEach((videos) => {
     console.log(videos);
+    const minutes = videos?.others?.posted_date;
+    const hours = Math.floor(minutes / 60);
+    const remainingMinutes = minutes % 60;
+    const timeString = `${hours} hours ${remainingMinutes} minutes`;
     const div = document.createElement("div");
     div.innerHTML = `
   <div class="card w-72 h-96 bg-base-100 shadow-xl">
         <figure><img src=${videos?.thumbnail} /></figure>
+        <span class="bg-black text-white">${timeString} ago</span>
         <div class="card-body">
-        <div class="flex justify-center gap-4">
+        
+        <div class="flex gap-2">
         <div class="w-14 h-14 rounded-full overflow-hidden">
         <img src="${
           videos?.authors[0]?.profile_picture
         }" class="w-full h-full object-cover"/>
-                  </div>
+         </div>
 
+          <div>
           <h2 class="card-title">
             ${videos?.title}
-            </div>
+            
           </h2>
           <div class="flex items-center gap-2">
           <h4>${videos?.authors[0]?.profile_name}</h4>
@@ -49,17 +57,19 @@ const handleLoadVideos = async (categoryId) => {
       : ""
   }</p>
 
-
           </div>
           <p>${videos?.others?.views} views</p>
-          <div class="card-actions justify-end">
-
+          
         </div>
+          </div>
+      
       </div>
+      
   `;
     cardContainer.appendChild(div);
   });
   console.log(data);
 };
+
 handleCategory();
 handleLoadVideos("1000");
