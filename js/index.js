@@ -11,6 +11,7 @@ const handleCategory = async () => {
     <button onclick="handleLoadVideos('${category.category_id}')" class="btn">${category.category}</button>
     `;
     btnContainer.appendChild(div);
+    // handleLoadVideos(category.categoryId)
   });
   console.log(data.data);
 };
@@ -20,6 +21,7 @@ const handleLoadVideos = async (categoryId) => {
   );
   const data = await response.json();
   const cardContainer = document.getElementById('card-container');
+  cardContainer.innerHTML = ""
   data.data.forEach((videos) => {
     console.log(videos);
   const div = document.createElement('div');
@@ -31,14 +33,18 @@ const handleLoadVideos = async (categoryId) => {
         <div class="w-14 h-14 rounded-full overflow-hidden">
         <img src="${videos?.authors[0]?.profile_picture}" class="w-full h-full object-cover"/>
                   </div>
-        
+
           <h2 class="card-title">
             ${videos?.title}
             </div>
           </h2>
+          <div class="flex">
           <p>${videos?.authors[0]?.profile_name}</p>
+          <p>${videos?.authors[0]?.verified?"True":"False"}</p>
+          </div>
+          <p>${videos?.others?.views} views</p>
           <div class="card-actions justify-end">
-            
+
         </div>
       </div>
   `
@@ -47,4 +53,4 @@ const handleLoadVideos = async (categoryId) => {
 console.log(data);
 }
 handleCategory();
-
+handleLoadVideos("1000");
