@@ -39,9 +39,9 @@ const handleLoadVideos = async (categoryId) => {
       const timeString = `${hours} hrs ${remainingMinutes} min`;
       const div = document.createElement("div");
       div.innerHTML = `
-              <div class="card w-72 h-96 bg-base-100 shadow-xl">
-                  <figure><img src=${videos?.thumbnail} /></figure>
-                  <span class="bg-black text-white">${timeString} ago</span>
+              <div class="card w-72 h-full bg-base-100 shadow-xl">
+                  <div><figure><img src=${videos?.thumbnail} /></figure></div>
+                  <span class="bg-black text-white ml-[150px] mt-[-30px]">${timeString} ago</span>
                   <div class="card-body">
                       <div class="flex gap-2">
                           <div class="w-14 h-14 rounded-full overflow-hidden">
