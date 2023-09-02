@@ -19,7 +19,11 @@
         <img src="./Logo.png" alt="" />
       </div>
       <div class="navbar-center lg:flex">
-        <button id="sortByViewBtn" onclick="" class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+        <button
+          id="sortByViewBtn"
+          onclick="handleSortByView()"
+          class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg"
+        >
           Sort by view
         </button>
       </div>
@@ -33,37 +37,26 @@
         </a>
       </div>
     </div>
-    <!-- start btn -->
+
     <div
       id="btn-container"
       class="btn-container flex justify-center gap-4 my-10"
-    >
-      <!-- <button class="btn">All</button>
-      <button class="btn">Music</button>
-      <button class="btn">Comedy</button>
-      <button class="btn">Drawing</button> -->
-    </div>
-    <!-- card -->
+    ></div>
+
     <div
       id="card-container"
       class="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 sm:grid-cols-1"
-    >
-      <!-- <div class="card w-96 bg-base-100 shadow-xl">
-        <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-        <div class="card-body">
-          <h2 class="card-title">
-            Shoes!
-            <div class="badge badge-secondary">NEW</div>
-          </h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-          <div class="card-actions justify-end">
-            <div class="badge badge-outline">Fashion</div> 
-            <div class="badge badge-outline">Products</div>
-          </div>
-        </div>
-      </div> -->
-    </div>
+    ></div>
 
+    <div
+      id="no-data-container"
+      class="hidden flex justify-center items-center w-full h-full bg-gray-100"
+    >
+      <div>
+        <img src="Icon.png" alt="No Data" />
+        <p class="text-2xl font-bold">Oops!! Sorry, There is no <br> content here</p>
+      </div>
+    </div>
     <script src="js/index.js"></script>
   </body>
 </html>
