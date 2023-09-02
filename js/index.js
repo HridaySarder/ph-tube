@@ -8,7 +8,7 @@ const handleCategory = async () => {
   data.data.forEach((category) => {
     const div = document.createElement("div");
     div.innerHTML = `
-          <button onclick="handleLoadVideos('${category.category_id}')" class="btn">${category.category}</button>
+          <button onclick="handleLoadVideos('${category.category_id}')" class="p-5 bg-gray-200 rounded-lg">${category.category}</button>
       `;
     btnContainer.appendChild(div);
   });
@@ -24,23 +24,19 @@ const handleLoadVideos = async (categoryId) => {
   const noDataContainer = document.getElementById("no-data-container");
 
   if (data.data.length === 0) {
-    
     cardContainer.classList.add("hidden");
     noDataContainer.classList.remove("hidden");
   } else {
-    
     noDataContainer.classList.add("hidden");
     cardContainer.classList.remove("hidden");
 
-    
     cardContainer.innerHTML = "";
 
-    
     data.data.forEach((videos) => {
       const minutes = videos?.others?.posted_date;
-      const hours = Math.floor(minutes / 60);
+      const hours = Math.floor(minutes % 60);
       const remainingMinutes = minutes % 60;
-      const timeString = `${hours} hours ${remainingMinutes} minutes`;
+      const timeString = `${hours} hrs ${remainingMinutes} min`;
       const div = document.createElement("div");
       div.innerHTML = `
               <div class="card w-72 h-96 bg-base-100 shadow-xl">

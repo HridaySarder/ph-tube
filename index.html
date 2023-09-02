@@ -11,7 +11,8 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="container mx-auto">
+
+  <body class="container mx-auto flex flex-col justify-center items-center">
     <!-- navbar section -->
     <div class="navbar bg-base-100">
       <div class="navbar-start">
@@ -22,7 +23,7 @@
         <button
           id="sortByViewBtn"
           onclick="handleSortByView()"
-          class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg"
+          class="p-5 bg-gray-200 rounded-lg btn-xs sm:btn-sm md:btn-md lg:btn-lg"
         >
           Sort by view
         </button>
@@ -45,16 +46,15 @@
 
     <div
       id="card-container"
-      class="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 sm:grid-cols-1"
+      class="grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 sm:grid-cols-1"
     ></div>
 
-    <div
-      id="no-data-container"
-      class="hidden flex justify-center items-center w-full h-full bg-gray-100"
-    >
-      <div>
-        <img src="Icon.png" alt="No Data" />
-        <p class="text-2xl font-bold">Oops!! Sorry, There is no <br> content here</p>
+    <div id="no-data-container" class="hidden flex justify-center items-center">
+      <div class="flex flex-col">
+        <div class="flex justify-center">
+          <img src="Icon.png" alt="No Data" />
+        </div>
+        <p class="text-2xl font-bold">Oops!! Sorry, There is no content here</p>
       </div>
     </div>
     <script src="js/index.js"></script>
