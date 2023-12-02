@@ -40,7 +40,7 @@ const handleLoadVideos = async (categoryId) => {
       const div = document.createElement("div");
       div.innerHTML = `
               <div class="card w-72 h-full bg-base-100 shadow-xl">
-                  <div><figure><img src=${videos?.thumbnail} /></figure></div>
+                  <div><figure><img class="h-[200px] w-full" src=${videos?.thumbnail} /></figure></div>
                   <span class="bg-black text-white ml-[150px] mt-[-30px]">${timeString} ago</span>
                   <div class="card-body">
                       <div class="flex gap-2">
